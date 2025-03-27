@@ -1,5 +1,5 @@
 const fs = require("fs");
-const rawInput = fs.readFileSync("input").trim(); // 0, "utf-8"
+const rawInput = fs.readFileSync("input").toString().trim(); // fs.readFileSync(0, "utf-8").trim()
 const input = rawInput.split("\n");
 
 const x = Number(input[0]);
