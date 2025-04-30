@@ -1,6 +1,4 @@
 function solution(a, b) {
-  const weekdays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-  const maxDays = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-  const days = maxDays.slice(0, a - 1).reduce((acc, cur) => acc + cur, 0) + b;
-  return weekdays[((days % 7) + 4) % 7];
+  const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  return days[new Date(2016, a - 1, b).getDay()];
 }
