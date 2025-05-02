@@ -14,4 +14,4 @@ for (let i = 2; i <= houses.length; i++) {
   ];
 }
 
-console.log(Math.min(...table[table.length - 1]));
+console.log(Math.min(...table[houses.length]));
