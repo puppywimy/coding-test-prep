@@ -56,8 +56,11 @@ def quickSort(array):
     def _quickSort(startIndex, endIndex):
         if startIndex == len(_array) or endIndex - startIndex <= 1:
             return
+
+        # pivot을 랜덤하게 선택, 안 그러면 RecursionError 발생
         pivotIndex = random.randrange(startIndex, endIndex)
         _array[pivotIndex], _array[startIndex] = _array[startIndex], _array[pivotIndex]
+
         pivotIndex = startIndex
         cursor1 = startIndex + 1
         cursor2 = endIndex - 1
