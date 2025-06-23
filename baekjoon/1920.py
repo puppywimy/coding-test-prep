@@ -47,12 +47,12 @@ def solutionWithBinarySearch():
         endIndex = len(array) - 1
         while startIndex <= endIndex:
             middleIndex = math.floor((startIndex + endIndex) / 2)
-            if array[middleIndex] == target:
-                return middleIndex
+            if array[middleIndex] < target:
+                startIndex = middleIndex + 1
             elif array[middleIndex] > target:
                 endIndex = middleIndex - 1
             else:
-                startIndex = middleIndex + 1
+                return middleIndex
         return -1
 
     N = int(input())
