@@ -1,6 +1,7 @@
 # 제출 시 파일 입출력 부분 지우기
 
 import sys
+import math
 
 sys.stdin = open("input", "r")
 
@@ -40,4 +41,30 @@ def solutionWithSorting():
     )
 
 
-solutionWithSorting()
+def solutionWithBinarySearch():
+    def binarySearch(array, target):
+        startIndex = 0
+        endIndex = len(array) - 1
+        while startIndex <= endIndex:
+            middleIndex = math.floor((startIndex + endIndex) / 2)
+            if array[middleIndex] == target:
+                return middleIndex
+            elif array[middleIndex] > target:
+                endIndex = middleIndex - 1
+            else:
+                startIndex = middleIndex + 1
+        return -1
+
+    N = int(input())
+    numbers = list(map(int, input().split(" ")))
+    M = int(input())
+    targetNumbers = list(map(int, input().split(" ")))
+    numbers.sort()
+    output = []
+    for targetNumber in targetNumbers:
+        output.append("1" if binarySearch(numbers, targetNumber) > -1 else "0")
+
+    print("\n".join(output))
+
+
+solutionWithBinarySearch()
