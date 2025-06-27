@@ -29,21 +29,21 @@ function solutionWithSorting() {
   console.log(output.join("\n"));
 }
 
-function bisectLeft(array, target) {
-  let startIndex = 0;
-  let endIndex = array.length;
-  while (startIndex < endIndex) {
-    let middleIndex = Math.floor((startIndex + endIndex) / 2);
-    if (target > array[middleIndex]) {
-      startIndex = middleIndex + 1;
-    } else {
-      endIndex = middleIndex;
-    }
-  }
-  return startIndex;
-}
-
 function solutionWithBinarySearch() {
+  function bisectLeft(array, target) {
+    let startIndex = 0;
+    let endIndex = array.length;
+    while (startIndex < endIndex) {
+      let middleIndex = Math.floor((startIndex + endIndex) / 2);
+      if (target > array[middleIndex]) {
+        startIndex = middleIndex + 1;
+      } else {
+        endIndex = middleIndex;
+      }
+    }
+    return startIndex;
+  }
+
   function bisectRight(array, target) {
     let startIndex = 0;
     let endIndex = array.length;
