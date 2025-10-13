@@ -18,7 +18,8 @@ def solution():
             print(" ".join(map(str, selections)))
             return
 
-        for number in range(lastNumber + 1, N + 1):
+        restCount = M - 1 - count
+        for number in range(lastNumber + 1, N + 1 - restCount):
             isUsed[number] = True
             recursive(count + 1, number)
             isUsed[number] = False
