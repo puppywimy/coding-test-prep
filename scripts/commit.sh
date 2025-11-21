@@ -15,7 +15,6 @@ if [ -z $1 ]; then
 else
   git commit -m "$commitMessage: $1"
 fi
-echo "\n"
-echo "성공적으로 커밋했습니다."
+echo "\n성공적으로 커밋했습니다."
 
 touch "$scope:r.md"
