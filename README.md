@@ -9,7 +9,7 @@
 2. Root 디렉토리에서 다음 명령어를 실행하면 커밋 Alias를 설정할 수 있습니다.
 
    ```sh
-   zsh scripts/init
+   zsh scripts/init.sh
    ```
 
    이제 "git c" 또는 "git c (메모)"를 통해 풀이를 빠르게 커밋할 수 있습니다.
