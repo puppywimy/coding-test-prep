@@ -39,7 +39,7 @@ zsh scripts/init.sh
 
 - **`git c <type> <message>`**
   - 작업 종류와 함께 간단한 커밋 메시지를 추가하여 커밋합니다.
-  - 예시: `git c s "30분 초과"`, `git c d`
+  - 예시: `git c s "30분 초과"`
 
 **3. 커밋 타입 (Commit Types)**
 
