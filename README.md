@@ -11,9 +11,11 @@
 ├── algorithms      - 알고리즘 문제 풀이 코드를 플랫폼별로 저장하는 곳입니다.
 │   ├── baekjoon
 │   ├── programmers
-│   └── goorm
+│   ├── goorm
+│   └── leetcode
 ├── assignments     - 과제 형태의 문제에 대한 풀이를 저장하는 곳입니다.
-└── scripts         - 프로젝트 관리를 돕는 스크립트가 위치합니다.
+├── scripts         - 프로젝트 관리를 돕는 스크립트가 위치합니다.
+└── description_template.md - 풀이 설명 파일(.md)의 템플릿입니다.
 ```
 
 <br />
@@ -63,3 +65,5 @@ zsh scripts/init.sh
 - `solve`: 문제 풀이 완료 후 최종 코드 등록
 - `solving`: 풀이 진행 중 중간 저장
 - `description`: 문제 및 풀이에 대한 설명 파일 추가
+
+`solve`나 `solving`으로 커밋하면 풀이 파일 옆에 같은 이름의 설명 파일(`.md`)이 `description_template.md`를 바탕으로 생성됩니다. 이미 설명 파일이 있으면 덮어쓰지 않습니다.
