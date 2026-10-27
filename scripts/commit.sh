@@ -30,5 +30,5 @@ fi
 echo "\n성공적으로 커밋했습니다."
 
 if [[ ( $type == "solve" ) || ( $type == "solving" ) ]]; then
-  touch "$scope:r.md"
+  [[ -e "$scope:r.md" ]] || cp description_template.md "$scope:r.md"
 fi
