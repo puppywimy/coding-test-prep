@@ -8,23 +8,15 @@
 
 ```
 .
-├── algorithms      - 알고리즘 문제 풀이 코드를 플랫폼별로 저장하는 곳입니다.
+├── algorithms              - 알고리즘 문제 풀이 코드를 플랫폼별로 저장하는 곳입니다.
 │   ├── baekjoon
-│   ├── programmers
 │   ├── goorm
-│   └── leetcode
-├── assignments     - 과제 형태의 문제에 대한 풀이를 저장하는 곳입니다.
-├── scripts         - 프로젝트 관리를 돕는 스크립트가 위치합니다.
+│   ├── leetcode
+│   └── programmers
+├── assignments             - 과제 형태의 문제에 대한 풀이를 저장하는 곳입니다.
+├── scripts                 - 프로젝트 관리를 돕는 스크립트가 위치합니다.
 └── description_template.md - 풀이 설명 파일(.md)의 템플릿입니다.
 ```
-
-<br />
-
-## 백준 Input 테스트 방법
-
-`algorithms/baekjoon` 폴더에 `input` 파일(확장자 없음)을 생성하여 작성한 코드를 테스트할 수 있습니다.
-
-`input` 파일에 원하는 테스트 케이스를 입력한 후 코드를 실행하면, 해당 입력을 기준으로 결과를 확인할 수 있습니다.
 
 <br />
 
@@ -67,3 +59,11 @@ zsh scripts/init.sh
 - `description`: 문제 및 풀이에 대한 설명 파일 추가
 
 `solve`나 `solving`으로 커밋하면 풀이 파일 옆에 같은 이름의 설명 파일(`.md`)이 `description_template.md`를 바탕으로 생성됩니다. 이미 설명 파일이 있으면 덮어쓰지 않습니다.
+
+<br />
+
+## 백준 Input 테스트 방법
+
+`algorithms/baekjoon` 폴더에 `input` 파일(확장자 없음)을 생성하여 작성한 코드를 테스트할 수 있습니다.
+
+`input` 파일에 원하는 테스트 케이스를 입력한 후 코드를 실행하면, 해당 입력을 기준으로 결과를 확인할 수 있습니다.
