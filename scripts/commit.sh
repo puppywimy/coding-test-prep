@@ -12,6 +12,25 @@ case $1 in
     ;;
 esac
 
+if [[ $type == "solve" ]]; then
+  if ! git diff --cached --quiet; then
+    echo "스테이지 영역이 비어 있지 않습니다."
+    exit 1
+  fi
+
+  files=(${(f)"$(git -c core.quotepath=off ls-files -m -d -o --exclude-standard | sort -u)"})
+  if (( ${#files} != 1 )); then
+    echo "워킹 트리에 변경된 파일이 하나여야 합니다. (현재 ${#files}개)"
+    printf '%s\n' $files
+    exit 1
+  fi
+
+  if ! grep -qs '[^[:space:]]' -- $files[1]; then
+    echo "파일이 비어 있습니다: $files[1]"
+    exit 1
+  fi
+fi
+
 untrackedFiles=$(git ls-files -o --exclude-standard --directory)
 echo "Untracked Files는 다음과 같습니다.\n$untrackedFiles\n"
 read "answer?모든 변경 사항을 커밋하시겠습니까? [Y/n] "
