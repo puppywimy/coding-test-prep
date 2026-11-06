@@ -1,14 +1,18 @@
 class Solution {
     fun averageWaitingTime(customers: Array<IntArray>): Double {
+        val times = mutableListOf<Long>()
 
-        var endTime = 0
-        var sum = 0L
-
-        for ((arrival, time) in customers) {
-            endTime = maxOf(endTime, arrival) + time
-            sum += endTime - arrival
+        var currtime = 0L
+        for ((a, t) in customers) {
+            currtime = maxOf(currtime, a.toLong()) + t
+            times.add(currtime - a)
         }
 
-        return sum.toDouble() / customers.size
+        var total = 0L
+        for (t in times) {
+            total += t
+        }
+
+        return total.toDouble() / times.size
     }
 }
